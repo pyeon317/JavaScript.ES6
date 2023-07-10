@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        let arr = [1, 2, 3];
+        function sum(x, y, z) {
+            return x + y + z;
+
+        };
+
+        console.log(sum(1, 2, 3))//6
+        console.log(sum(...arr));//6
+
+
+
+        console.log(sum(10, 20, ...arr)); //10, 20, 1, 2, 3 => 31 
+        //배열은 5개가 들어갔지만 sum함수가 3개만 가져가기 때문에 1 까지만 더해짐
+
+        console.log('------------------------------------')
+
+        //가변적 매개변수 - 가장 뒤에 선언 되야됩니다.
+
+        function sum2(y, ...x);
+        console.log(x);
+
+        sum2(1);
+        sum2(1, 2);
+        sum2(1, 2, 3);
+
+
+        //함수의 default 매개변수 - 함수 매개변수의 기
+
+        function sum3(x, y = 10, z = 20) {
+            return x + y + z;
+        }
+
+        console.log(sum3(...arr)); //6
+        console.log(sum3(1)); //31  배열에 순서대로 선언. > x에 1을 넣었으므로 1+10+20
+        console.log(sum3(1, 2)); //23 x=1, y=2를 넣어서 1+2+20
+
+
+        //주로 배열에 적용함
+        console.log();
+
+
+    </script>
+
+</body>
+
+</html>

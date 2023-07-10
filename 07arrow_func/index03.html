@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //1초마다 실행
+        // var a = window.setInterval(function() {
+        //     console.log('call');
+        // },1000);
+
+        // //5초 뒤 실행
+        // window.setTimeout(function() {
+        //     window.clearInterval(a);
+        // }, 5000);
+
+        // (function () {
+        //     console.log('즉시 실행 함수');
+        // })();
+
+        let a = window.setInterval( () => {
+            console.log('call');
+        }, 1000 );
+
+        window.setTimeout( () => {
+            window.clearInterval(a);
+        }, 5000 );
+
+        ( () => {
+            console.log('즉시 실행 함수');
+        } )();
+        
+        
+    </script>
+
+
+</body>
+</html>

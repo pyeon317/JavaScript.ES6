@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const arr = ['a', 'b', 'c', 'd'];
+        /* 
+        let n1 = arr[0];
+        let n2 = arr[1];
+        */
+
+        const [a, b, c, d] = arr;
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        console.log(d);
+
+        const [n1, n2, , n4] = arr; //n4를 앞에 쓰면 d가 아닌 c가 나옴. 빈칸을 만들어서 해당 위치를 건너 뜀. 자리 위치가 중요하다
+        console.log(n1); //a
+        console.log(n2); //b
+        console.log(n4); //d
+
+        const [k1, k2] = arr;
+        console.log(k1); //a
+        console.log(k2); //b
+
+        //arr을 전부다 반환받음 (배열)
+        const [...x] = arr;//x를 전개해서 받는다.
+        console.log(x);
+
+        const [x1, x2, ...x3] = arr; //arr을 해당 형태의 구성으로 받는다. 1 > x1, 2> x2, 나머지 요소는 x3
+        console.log(x1); //a
+        console.log(x2); //b
+        console.log(x3); //[c,d]
+
+
+
+    </script>
+
+
+</body>
+
+</html>

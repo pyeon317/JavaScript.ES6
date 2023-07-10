@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const arr = [1, 2, 3];
+        console.log(...arr); //arr의 요소를 재개
+
+        //배열의 추가
+        const num1 = [10, 20, 30, ...arr];
+        console.log(num1);//10 20 30 1 2 3
+
+        //중간에 추가
+        const num2 = [10, 20, ...arr, ...arr, 30];
+        console.log(num2);
+
+        //배열의 복사
+        const num3 = [...arr];
+        console.log(num3);
+
+
+
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head><body>
+
+    <script>
+        let list = [
+            {
+                "num": 1,
+                "title": "hello",
+                "info": ["banana", "apple"],
+                "profile": { "birth": "20201111", "img": "https://wwww.test.com/1" }
+            },
+            {
+                "num": 1,
+                "title": "hello",
+                "info": ["melon", "orange"],
+                "profile": { "birth": "20201212", "img": "https://wwww.test.com/2" }
+            }
+        ]
+
+
+        //두번째 객체의 title의 값
+        //console.log(list[1]['title']);
+        // const [ , a]= list;
+        // console.log(a); //a는 배열 두번째 값.
+
+        //const [ , {title}] = list;
+        //console.log(title); //두번째 요소의 타이틀 부분값
+
+
+        //두번째 객체의 num, title, info
+        // const [ , {num : a, title : b, info : c}] = list;
+        // console.log(a, b, c);
+
+
+        //두번째 객체의 info의 첫번째 요소
+        // const [, {info : [a,b]}] = list;
+        // console.log(a,b);
+
+        //첫번째 객체의 ptofile안에 있는 birth와 img값 구조분해할당
+        console.log(list);
+        
+
+        
+        const[ {profile : {birth, img} } ] = list;
+        const[ {profile : {birth : a, img : b} } ] = list;
+
+        console.log(birth);
+        console.log(img);
+
+        console.log(a,b);
+
+
+    </script>
+</body>
+
+</html>

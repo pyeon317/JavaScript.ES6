@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <ul>
+        <li>목록1</li>
+        <li>목록2</li>
+        <li>목록3</li>
+        <li>목록4</li>
+    </ul>
+
+    <script>
+
+        var li = document.querySelectorAll('li');
+
+        //i = 0,1,2,3 //for문으로 4까지 증가했기 떄문에 var라서 어떤 걸 눌러도 4
+        /* for(var i = 0; i < li.length; i++){
+            li[i].addEventListener('click', function(){
+                console.log(i);
+            })
+        } */
+
+        for (let i = 0; i < li.length; i++) {
+            li[i].addEventListener('click', function () {
+                console.log(i);
+            })
+        }
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

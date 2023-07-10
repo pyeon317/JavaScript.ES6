@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="time"></div>
+<script>
+
+    setInterval(() => {
+        let date = new Date();
+
+        let hour = date.getHours();
+        let min = date.getMinutes();
+        let second = date.getSeconds();
+
+        console.log(`${hour >= 10 ? hour : `0${hour}`} : ${min >= 10 ? min : `0${min}`} : ${second >= 10 ? second : `0${second}`}`);
+        
+        document.querySelector(".time").innerHTML = `${hour >= 10 ? hour : `0${hour}`} : 
+                                                     ${min >= 10 ? min : `0${min}`} : 
+                                                     ${second >= 10 ? second : `0${second}`}`;
+    
+    }, 1000);
+
+
+        //
+
+
+    </script>
+</body>
+</html>
