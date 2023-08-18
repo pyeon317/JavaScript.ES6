@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //프로미스를 반환하는 함수 3개
+
+      function ajax1() {
+        return new Promise(function (success, fail) {
+          setTimeout(() => {
+            success("5초 뒤 실행");
+          }, 5000);
+        });
+      }
+      function ajax2() {
+        return new Promise(function (success, fail) {
+          setTimeout(() => {
+            success("3초 뒤 실행");
+          }, 3000);
+        });
+      }
+      function ajax3() {
+        return new Promise(function (success, fail) {
+          setTimeout(() => {
+            success("2초 뒤 실행");
+          }, 2000);
+        });
+      }
+
+      //ajax1() ajax2() ajax3() 순서대로 반환받습니다.
+      /* 
+      ajax1().then((success) => {
+        console.log(success);
+
+        ajax2().then((success) => {
+          console.log(success);
+
+          ajax3().then((success) => {
+            console.log(success);
+          });
+        });
+      });
+ */
+      (async () => {
+
+        const result1 = await ajax1();
+        console.log(result)
+        const result2 = await ajax2();
+        console.log(result)
+        const result3 = await ajax3();
+        console.log(result)
+      })
+
+
+
+
+    </script>
+  </body>
+</html>

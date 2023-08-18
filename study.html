@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="study.js"></script>
+</head>
+
+<body>
+
+  <input type="text" class="text" id="text">
+  <button onclick="solution">123</button>
+  <script>
+    console.log(morse);
+
+    var letter = document.getElementById("text");
+    
+    
+    function solution(letter) {
+      var answer = '';
+      if(morse.contains(letter)){
+        answer = morse.getkey(letter);
+      }
+      console.log(answer);
+      console.log(1);
+      return answer;
+    }
+
+  </script>
+
+
+</body>
+
+</html>

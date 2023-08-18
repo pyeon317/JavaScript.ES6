@@ -23,18 +23,23 @@
         //     console.log('즉시 실행 함수');
         // })();
 
-        let a = window.setInterval( () => {
-            console.log('call');
-        }, 1000 );
+        // let a = window.setInterval( () => {
+        //     console.log('call');
+        // }, 1000 );
 
-        window.setTimeout( () => {
-            window.clearInterval(a);
-        }, 5000 );
+        let a = window.setInterval( () => console.log('call'), 1000);
+
+        // window.setTimeout( () => {
+        //     window.clearInterval(a);
+        // }, 5000 );
+
+        window.setInterval( () => window.clearInterval(a), 5000 );
 
         ( () => {
             console.log('즉시 실행 함수');
+            
         } )();
-        
+
         
     </script>
 

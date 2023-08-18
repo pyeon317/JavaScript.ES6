@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        일반 Http에서는 굳이 클래스를 생성할 필요는 ㅇ벗습니다.Http에서는
+        //멤버변수 지칭할 때 키워드를 사용하지 않습니다.
+
+        class Person{
+
+            //멤버변수
+            a = '홍길동';
+            b = 19;
+            c = {};
+
+// 생성자 - constructor, 1개만 선언이 가능함
+constructor(b) {
+    this.b = b;
+}       
+
+//함수
+func = () => {
+console.log('함수 1번');
+}
+
+//함수
+func2( ) {
+    console.log(this.a, this.b, this.c);
+}
+}
+//rorcp todyjd
+let p = new Person();
+console.log(p.a);
+console.log(p.b);
+console.log(p.c);
+p.func();
+p.func2();
+
+new Person():
+
+
+//객체 생성2
+let p2 =new person(30);
+
+
+    </script>
+</body>
+</html>

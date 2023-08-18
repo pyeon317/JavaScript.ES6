@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        class shape{
+            constructor(){}
+            getShape (){}
+        }
+
+        class Rect extends Shape{
+            constructor() {
+                super(); //반드시 부모님의 생성자와 연결
+                this.w = w; //this 키워드 사용시에 멤버변수 자동생성
+                this.h = h;
+            }
+            //게터
+            getW(){
+                return this.w;
+            }
+            //세터
+            setW(w){
+                this.w = w;
+            }
+        }
+
+        Let rect = new Rect(10,20);
+        rect.getShape();//상속받음
+        rect.getW();//내꺼
+        rect.setW(10);//내꺼
+
+        console.log(rect.w);
+        console.log(rect.h);
+
+    </script>
+</body>
+</html>
